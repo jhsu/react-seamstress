@@ -129,6 +129,7 @@ function configureSeamstress (config={}) {
         render () {
           const { props, context } = this;
           return <Component
+            forceUpdate={this.forceUpdate.bind(this)}
             {...props}
             computedStyles={getComputedStyles({props, context})}
           />;
